@@ -298,6 +298,72 @@
             font-weight: 500;
         }
 
+                /* Timeline Styles */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 2px;
+            background-color: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: calc(-1.5rem - 4px);
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 2px solid var(--bg-color);
+        }
+
+        .job-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .job-meta {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .job-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            list-style-type: none;
+        }
+
+        .job-desc li {
+            margin-bottom: 0.4rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .job-desc li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
         @media (min-width: 768px) {
             body { padding: 4rem 2rem; }
         }
@@ -326,8 +392,8 @@
                     <span class="label">System Digital Projects</span>
                 </div>
                 <div class="stat-item">
-                    <span class="num">12</span>
-                    <span class="label">System Assistants Managed</span>
+                    <span class="num">24</span>
+                    <span class="label">Library Assistants Managed over 2 years</span>
                 </div>
                 <div class="stat-item">
                     <span class="num">+17%</span>
@@ -428,12 +494,25 @@
                     </ul>
                 </div>
                 <div class="skills-category">
-                    <h3>Systems & Automation</h3>
+                    <h3>Systems & Platforms</h3>
                     <ul class="skills-list">
+                        <li>OCLC & WorldCat Systems</li>
+                        <li>InterLibrary Loan Platforms</li>
+                        <li>SQL Database Management</li>
+                        <li>Discovery Systems Admin</li>
                         <li>SQL Database Management</li>
                         <li>Python Data Pipelines</li>
                         <li>Systems Analysis</li>
                         <li>Git Version Control</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Languages & Credentials</h3>
+                    <ul class="skills-list">
+                        <li>English & Spanish (Fluent)</li>
+                        <li>Mandarin, Greek, Hebrew</li>
+                        <li>ALA Reference Conduct (2025)</li>
+                        <li>ALA Preservation Cert (2024)</li>
                     </ul>
                 </div>
                 <div class="skills-category">
@@ -442,6 +521,49 @@
                         <li>Prompt Engineering</li>
                         <li>Python (pandas)</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+ <!-- Professional Timeline Section -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="skills-category">
+                <div class="timeline">
+                    
+                    <!-- Role 1 -->
+                    <div class="timeline-item">
+                        <div class="job-title">Research Services Librarian</div>
+                        <div class="job-meta">T.J. Jones Library, Minneapolis, MN • July 2025 – Present</div>
+                        <ul class="job-desc">
+                            <li>Provided research assistance and customer support to users accessing digital catalogs, databases, and research platforms serving 1,000+ patrons.</li>
+                            <li>Developed over 15 projects improving user documentation, online tutorials, and training materials to simplify information discovery.</li>
+                            <li>Facilitated 350+ consultations and 55 navigation instruction sessions, increasing library website utilization by 17%.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Role 2 -->
+                    <div class="timeline-item">
+                        <div class="job-title">Circulation Specialist & Archivist</div>
+                        <div class="job-meta">T.J. Jones Library, Minneapolis, MN • May 2023 – July 2025</div>
+                        <ul class="job-desc">
+                            <li>Administered library systems, digitized content, and metadata holdings while maintaining accurate system records for long-term usability.</li>
+                            <li>Troubleshot user access, system navigation, and resource requests to enhance platform discoverability.</li>
+                            <li>Supervised and trained a team of 12 assistants, managing workflows, scheduling, and continuous process improvements.</li>
+                            <li>Utilized specialized platforms including OCLC, WorldCat, and InterLibrary Loan tools for daily operations.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Role 3 -->
+                    <div class="timeline-item">
+                        <div class="job-title">Lead Library Assistant & Library Assistant</div>
+                        <div class="job-meta">T.J. Jones Library, Minneapolis, MN • Aug 2021 – May 2023</div>
+                        <ul class="job-desc">
+                            <li>Performed quality control checks on processed materials and catalog entries while coordinating global resource lending workflows.</li>
+                            <li>Served as a key resource for daily operational support, staff inquiry resolution, and information catalog maintenance.</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -473,7 +595,7 @@
                 </div>
             </div>
         </section>
-        
+
         <footer>
             <p>
                 &copy; 2026 • Ellie Cronk • Technical Information Science Specialist • 
