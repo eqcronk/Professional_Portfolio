@@ -1,44 +1,52 @@
 # Technical Information Science Specialist Portfolio
 
-Welcome to my professional portfolio repository. This project showcases my capability to bridge the gap between complex technological systems and human-centric information management, with a strong focus on data structural integrity, automation pipelines, and knowledge management frameworks.
+Welcome to my professional portfolio repository. This project showcases my capability to bridge the gap between complex technological systems and human-centric information management, with a strong focus on data structural integrity, automation pipelines, and library knowledge management frameworks.
 
-## Live Demo
-You can view the live, fully responsive website by opening `index.html` directly in any web browser, or via GitHub Pages.
+## Live Portfolio Website
+You can view my live, fully responsive digital portfolio here:  
+[https://github.io]https://eqcronk.github.io/Professional_Portfolio/)
 
 ---
 
 ## Case Studies Featured
 
-### 1. Interactive Citation Tool & Website Guides
+### 1. Interactive SBL Guide
 *   **Core Focus:** System Design & Web UX
-*   **The Problem:** Users struggled to format complex academic citation formats correctly, causing compliance issues.
-*   **The Execution:** Designed a clean logical metadata schema and frontend logic to render an intuitive user interface.
-*   **Impact Metric:** **Reduced user citation formatting errors by 30%** during usability benchmarks.
+*   **The Execution:** Designed and structured a logical metadata schema mapping complex academic citation formats into an accessible digital product layer. Handled the frontend design logic to ensure high accuracy and visual simplicity.
+*   **Impact Metric:** Reduced user citation formatting errors by 30% during pilot usability benchmarks.
 
 ### 2. Disjointed Enterprise Data Reconciliation Pipeline
 *   **Core Focus:** Data Architecture & Integrity
-*   **The Problem:** Conflicting, duplicated records across mismatched datasets prevented a clean source of truth.
-*   **The Execution:** Engineered an automated backend cleanup script using OpenRefine to map schemas and resolve data discrepancies.
-*   **Impact Metric:** **Cleaned and mapped entries**.
+*   **The Execution:** Engineered an automated backend cleanup workflow to reconcile mismatched records, schemas, and duplicate records across conflicting enterprise datasets using OpenRefine, Schema.org mappings, and Wikidata serialization.
+*   **Impact Metric:** Reconciled, cleaned, and exported unified linked data assets into highly accurate Turtle (.ttl) graphs.
 
-### 3. Interactive E-Learning & Knowledge Modules
+### 3. Interactive H5P E-Learning & Knowledge Modules
 *   **Core Focus:** Knowledge Management
-*   **The Problem:** Lack of resource documentation was causing high cognitive overload.
-*   **The Execution:** Formatted  documentation into interactive micro-learning modules optimized for knowledge retention.
-*   **Impact Metric:** **Launched interactive, self-paced learning modules**, boosting patron resources.
+*   **The Execution:** Formatted heavy academic backend systems documentation into interactive branching scenarios, hotspots, and guided media tours optimized for user cognitive load.
+*   **Impact Metric:** Built and launched interactive tutorial guides, significantly boosting patron independent resource discovery and system access.
 
 ---
 
 ## Technical Skills Matrix
 
-*   **Information Science:** Taxonomy & Ontology, Metadata Standards (Dublin Core), Data Curation, Knowledge Management.
-*   **Systems & Automation:** SQL Database Management, OpenRefine, Power BI, Systems Analysis, Git/GitHub.
-*   **Frontend Tools:** HTML5, Responsive UI/UX Layouts.
+*   **Information Science:** Taxonomy & Ontology, Metadata Standards (Dublin Core), Linked Data (RDF, SKOS), Authority Control & Quality Assurance.
+*   **Systems & Platforms:** OCLC & WorldCat Systems, InterLibrary Loan Platforms, SQL Database Management, Discovery Systems Administration, Git Version Control.
+*   **Languages & Credentials:** Fluent in English & Spanish (Intermediate knowledge of Mandarin, Greek, and Hebrew). ALA Reference Conduct (2025), ALA Preservation Certification (2024).
 
 ---
 
-## How to Deploy This Site Locally
+## Education Background
+*   **MS in Library & Information Science (MLIS)** — University of Alabama (May 2026) — GPA 4.0 | Archival Studies Graduate Certificate
+*   **MA in Biblical & Theological Studies** — North Central University (Dec 2024) — GPA 3.9 | Highest Honors
+*   **BA in Biblical & Theological Studies** — North Central University (May 2023) — GPA 3.7 | Student of the Year
 
-1.  **Clone or Download:** Copy the `index.html` file from this repository into a local folder on your computer.
-2.  **Open:** Double-click the file or right-click and choose **Open With** -> **[Your Web Browser]** (Chrome, Safari, Firefox, Edge, etc.).
-3.  **Customize:** Change the placeholder text (`Your Name`, bio, links) using any simple text editor like VS Code or Notepad.
+---
+
+## How to Run Locally
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com
+    ```
+2.  **Open the file:** Navigate to the folder and open index.html directly in any standard modern web browser.
+3.  **Customize:** Modify the file using a simple text editor (like VS Code or Notepad) to adjust any text attributes.
