@@ -369,6 +369,7 @@
             font-size: 0.8rem;
         }
 
+          /* Endorsements, Coursework & Contact Module Styles */
         .testimonial-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
@@ -409,6 +410,36 @@
             font-weight: 600;
             color: var(--text-main);
         }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #f1f5f9 100%);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
@@ -459,6 +490,16 @@
                         <div class="edu-title">MA in Biblical & Theological Studies</div>
                         <div class="edu-meta">North Central University | <span class="edu-badge">GPA 3.9 — Highest Honors</span></div>
                     </div>
+                </div>
+
+                <div class="skills-category" style="margin-top: 1rem;">
+                    <h3>Targeted Coursework</h3>
+                    <ul class="skills-list" style="font-size: 0.8rem;">
+                        <li>LS 500 - Information Science and Technology</li>
+                        <li>LS 563 - Linked Data</li>
+                        <li>LS 506 - Cataloging and Classification</li>
+                        <li>LS 508 - Management Theory and Practice</li>
+                    </ul>
                 </div>
             </div>
 
@@ -619,7 +660,17 @@
                         </div>
                     </div>
                 </section>
-
+         <!-- Direct Connection Box -->
+                    <div class="contact-box">
+                        <h3 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.25rem;">Let's Connect</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">I am currently open to technical information science and digital curation opportunities.</p>
+                        <div class="contact-grid">
+                            <a href="mailto:eqcronk@gmail.com" class="contact-link">📧 eqcronk@gmail.com</a>
+                            <a href="tel:6514130501" class="contact-link">📞 (651) 413-0501</a>
+                            <a href="https://linkedin.com" target="_blank" class="contact-link">💼 LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </section>
             </div>
             
         </div> <!-- End Dashboard Grid -->
