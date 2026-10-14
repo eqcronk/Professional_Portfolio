@@ -254,9 +254,54 @@
             font-size: 0.9rem;
         }
 
+.stats-banner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .stat-item .num {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: var(--accent);
+            display: block;
+        }
+
+        .stat-item .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .edu-item {
+            margin-bottom: 1.25rem;
+        }
+
+        .edu-title {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .edu-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .edu-badge {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
         @media (min-width: 768px) {
             body { padding: 4rem 2rem; }
         }
+
     </style>
 </head>
 <body>
@@ -271,6 +316,25 @@
             <p class="philosophy">
                 "I believe data is only as valuable as its accessibility. I focus on designing validation frameworks while keeping interfaces clean, predictable, and logical for cross-functional usage."
             </p>
+            <div class="stats-banner">
+                <div class="stat-item">
+                    <span class="num">350+</span>
+                    <span class="label">Research Consultations</span>
+                </div>
+                <div class="stat-item">
+                    <span class="num">15+</span>
+                    <span class="label">System Digital Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="num">12</span>
+                    <span class="label">System Assistants Managed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="num">+17%</span>
+                    <span class="label">Website Engagement Boost</span>
+                </div>
+            </div>
+
             <a href="files/Ellie_Cronk_Resume.pdf" target="_blank" class="cta-btn">⬇ Download Resume (PDF)</a>
         </header>
 
@@ -382,6 +446,34 @@
             </div>
         </section>
 
+ <!-- Education & Credentials Section -->
+        <section id="education">
+            <h2>Education & Credentials</h2>
+            <div class="skills-container" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                <div class="skills-category">
+                    <div class="edu-item">
+                        <div class="edu-title">MS in Library & Information Science (MLIS)</div>
+                        <div class="edu-meta">University of Alabama | <span class="edu-badge">GPA 4.0</span></div>
+                        <div class="edu-meta" style="font-size: 0.85rem; margin-top: 0.2rem;">• Archival Studies Graduate Certificate</div>
+                    </div>
+                    <div class="edu-item" style="margin-bottom: 0;">
+                        <div class="edu-title">Archival Studies Certification</div>
+                        <div class="edu-meta">Issued 2026</div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <div class="edu-item">
+                        <div class="edu-title">MA in Biblical & Theological Studies</div>
+                        <div class="edu-meta">North Central University | <span class="edu-badge">GPA 3.9 — Highest Honors</span></div>
+                    </div>
+                    <div class="edu-item" style="margin-bottom: 0;">
+                        <div class="edu-title">BA in Biblical & Theological Studies</div>
+                        <div class="edu-meta">North Central University | <span class="edu-badge">Student of the Year</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <footer>
             <p>
                 &copy; 2026 • Ellie Cronk • Technical Information Science Specialist • 
