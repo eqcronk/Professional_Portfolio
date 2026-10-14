@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Information Science Specialist Portfolio</title>
+    <title>Ellie Cronk | Technical Information Science Portfolio</title>
     <style>
         :root {
-            --bg-color: #f8fafc;       
-            --card-bg: #ffffff;         
-            --text-main: #b1b2b4;       
-            --text-muted: #5b5d5f;      
-            --accent: #0284c7;          
-            --accent-hover: #0369a1;    
-            --border: #e2e8f0;          
+            --bg-color: #f8fafc;        /* Clean light background */
+            --card-bg: #ffffff;         /* Crisp white cards */
+            --text-main: #334155;       /* Softened slate gray for core headers and text */
+            --text-muted: #64748b;      /* Lightened washed gray for descriptions */
+            --accent: #0284c7;          /* Professional sky blue for accents */
+            --accent-hover: #0369a1;    /* Darker blue for active hover states */
+            --border: #e2e8f0;          /* Clean gray structural dividers */
+            --tag-bg: #f0fdf4;
+            --tag-text: #166534;
         }
 
         * {
@@ -25,88 +27,133 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.5;
             padding: 2rem 1rem;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* Side-by-Side Dashboard Grid Setup */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        @media (min-width: 992px) {
+            .dashboard {
+                grid-template-columns: 380px 1fr;
+            }
+            .sidebar-sticky {
+                position: sticky;
+                top: 2rem;
+            }
+        }
+
         header {
-            margin-bottom: 3rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 2rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--text-main);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.025em;
         }
 
         .subtitle {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: var(--accent);
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 1rem;
         }
 
         .bio {
             color: var(--text-muted);
-            max-width: 700px;
-            font-size: 1.05rem;
-            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
         }
 
         .philosophy {
             font-style: italic;
-            color: var(--accent);
-            border-left: 2px solid var(--border);
-            padding-left: 1rem;
-            margin-top: 1rem;
-            max-width: 700px;
-            font-size: 0.95rem;
+            color: var(--text-main);
+            border-left: 3px solid var(--accent);
+            padding-left: 0.75rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
         }
 
         .cta-btn {
             display: inline-block;
-            margin-top: 1.5rem;
-            background-color: transparent;
-            color: var(--accent) !important;
-            border: 1px solid var(--accent);
-            padding: 0.5rem 1.2rem;
+            width: 100%;
+            text-align: center;
+            background-color: var(--accent);
+            color: #ffffff !important;
+            padding: 0.6rem 1.2rem;
             border-radius: 0.375rem;
             font-size: 0.9rem;
             font-weight: 500;
             text-decoration: none !important;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease;
+            margin-top: 0.5rem;
         }
 
         .cta-btn:hover {
-            background-color: rgba(56, 189, 248, 0.1);
-            color: var(--accent-hover) !important;
-            border-color: var(--accent-hover);
+            background-color: var(--accent-hover);
+        }
+
+        .stats-banner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-item {
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            text-align: center;
+        }
+
+        .stat-item .num {
+            font-size: 1.35rem;
+            font-weight: bold;
+            color: var(--accent);
+            display: block;
+        }
+
+        .stat-item .label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
         }
 
         section {
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
 
         h2 {
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.35rem;
+            margin-bottom: 1.25rem;
             color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            letter-spacing: -0.025em;
         }
 
         .grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
         .project-link, 
@@ -123,14 +170,14 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 0.75rem;
-            padding: 1.75rem;
-            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            padding: 1.5rem;
+            transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
         }
 
         .project-link:hover .card {
-            transform: translateY(-4px);
+            transform: translateY(-2px);
             border-color: var(--accent);
-            box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.2);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
         }
 
         .card-header-flex {
@@ -142,9 +189,9 @@
         }
 
         .card-title {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             color: var(--text-main);
-            transition: color 0.2s ease;
+            font-weight: 600;
         }
 
         .project-link:hover .card-title {
@@ -153,88 +200,83 @@
 
         .link-icon {
             color: var(--text-muted);
-            font-size: 1.1rem;
-            transition: color 0.2s ease;
-        }
-
-        .project-link:hover .link-icon {
-            color: var(--accent);
+            font-size: 1rem;
         }
 
         .tag {
             display: inline-block;
-            background-color: rgba(56, 189, 248, 0.1);
-            color: var(--accent);
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .card-text {
             color: var(--text-muted);
-            margin-bottom: 1.25rem;
-            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
         }
 
         .metrics {
-            background-color: rgba(15, 23, 42, 0.4);
+            background-color: var(--bg-color);
             border-left: 3px solid var(--accent);
-            padding: 0.75rem 1rem;
-            margin-bottom: 1.25rem;
-            border-radius: 0 0.5rem 0.5rem 0;
-        }
-
-        .metrics strong {
-            color: var(--text-main);
+            padding: 0.5rem 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: 0 0.375rem 0.375rem 0;
+            font-size: 0.85rem;
         }
 
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.35rem;
         }
 
         .tech-pill {
-            background-color: #f1f5f9;
+            background-color: var(--bg-color);
             border: 1px solid var(--border);
             color: var(--text-muted);
-            padding: 0.2rem 0.6rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 0.25rem;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-family: monospace;
         }
 
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
 
         .skills-category {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 0.75rem;
-            padding: 1.5rem;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
         }
 
         .skills-category h3 {
-            font-size: 1.1rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
             border-bottom: 1px solid var(--border);
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.25rem;
         }
 
         .skills-list {
             list-style: none;
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .skills-list li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -245,366 +287,264 @@
             color: var(--accent);
         }
 
-        footer {
-            margin-top: 5rem;
-            border-top: 1px solid var(--border);
-            padding-top: 2rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-.stats-banner {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid var(--border);
-            border-radius: 0.75rem;
-            padding: 1.25rem;
-            text-align: center;
-        }
-
-        .stat-item .num {
-            font-size: 1.75rem;
-            font-weight: bold;
-            color: var(--accent);
-            display: block;
-        }
-
-        .stat-item .label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .edu-item {
-            margin-bottom: 1.25rem;
-        }
-
-        .edu-title {
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .edu-meta {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .edu-badge {
-            color: var(--accent);
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-                /* Timeline Styles */
+        /* Timeline layout optimizations */
         .timeline {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 4px;
-            top: 0.5rem;
-            bottom: 0.5rem;
-            width: 2px;
-            background-color: var(--border);
+            gap: 1.25rem;
         }
 
         .timeline-item {
-            position: relative;
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 1rem;
         }
 
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: calc(-1.5rem - 4px);
-            top: 0.5rem;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: var(--accent);
-            border: 2px solid var(--bg-color);
+        .timeline-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
         .job-title {
-            font-size: 1.15rem;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--text-main);
         }
 
         .job-meta {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--accent);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
         }
 
         .job-desc {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             list-style-type: none;
         }
 
         .job-desc li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.25rem;
             position: relative;
-            padding-left: 1rem;
+            padding-left: 0.75rem;
         }
 
         .job-desc li::before {
-            content: "▹";
+            content: "›";
             position: absolute;
             left: 0;
             color: var(--accent);
+            font-weight: bold;
         }
 
-        @media (min-width: 768px) {
-            body { padding: 4rem 2rem; }
+        .edu-item {
+            margin-bottom: 1rem;
         }
 
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .edu-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .edu-badge {
+            color: var(--tag-text);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 3rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <header>
-            <h1>Ellie Cronk, MA, MLIS</h1>
-            <div class="subtitle">Technical Information Science Specialist</div>
-            <p class="bio">
-                Bridging the gap between complex technological systems and human-centric information management. Expert in data structural integrity, automation pipelines, and translating scientific metadata ecosystems into intuitive, operational digital frameworks.
-            </p>
-            <p class="philosophy">
-                I believe data is only as valuable as its accessibility. I focus on designing validation frameworks while keeping interfaces clean, predictable, and logical for cross-functional usage.
-            </p>
-            <div class="stats-banner">
-                <div class="stat-item">
-                    <span class="num">350+</span>
-                    <span class="label">Research Consultations</span>
-                </div>
-                <div class="stat-item">
-                    <span class="num">15+</span>
-                    <span class="label">System Digital Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="num">24</span>
-                    <span class="label">Library Assistants Managed over 2 years</span>
-                </div>
-                <div class="stat-item">
-                    <span class="num">+17%</span>
-                    <span class="label">Website Engagement Boost</span>
-                </div>
-            </div>
-
-            <a href="files/Ellie_Cronk_Resume.pdf" target="_blank" class="cta-btn">⬇ Download Resume (PDF)</a>
-        </header>
-
-        <section id="projects">
-            <h2>Selected Technical Projects</h2>
-            <div class="grid">
-                
-                <!-- Project 1 -->
-                <a href="https://eqcronk.github.io/SBL-Guide/" target="_blank" class="project-link">
-                    <div class="card">
-                        <div class="tag">System Design & Web UX</div>
-                        <div class="card-header-flex">
-                            <div class="card-title">Interactive SBL Guide</div>
-                            <span class="link-icon">↗</span>
-                        </div>
-                        <p class="card-text">
-                            Designed and structured a logical metadata schema mapping complex academic citation formats into an accessible digital product layer. Handled the frontend design logic to ensure high accuracy and visual simplicity.
-                        </p>
-                        <div class="metrics">
-                            <strong>Outcome:</strong> Reduced user citation formatting errors by 30% during usability benchmarks.
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-pill">HTML5</span>
-                            <span class="tech-pill">Information Architecture</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Project 2 -->
-                <a href="https://github.com/eqcronk/-linked-data-project" target="_blank" class="project-link">
-                    <div class="card">
-                        <div class="tag">Data Architecture & Integrity</div>
-                        <div class="card-title">Data Reconciliation Pipeline</div>
-                        <p class="card-text">
-                            Engineered a secure algorithmic cleanup workflow to reconcile mismatched records, schemas, and duplicate records across conflicting datasets. Established a clean, singular source of truth database framework.
-                        </p>
-                        <div class="metrics">
-                            <strong>Outcome:</strong> Cleaned and mapped entries for accuracy.
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-pill">SPRQL</span>
-                            <span class="tech-pill">SQL</span>
-                            <span class="tech-pill">RDF</span>
-                            <span class="tech-pill">SKOS</span>
-                            <span class="tech-pill">Dublin Core</span>
-                            <span class="tech-pill">Authority Control</span>
-                            <span class="tech-pill">Cataloging ntegrity</span>
-                            <span class="tech-pill">Metadata QA</span>
-                            <span class="tech-pill">Linked Data</span>
-                            <span class="tech-pill">Data Governance</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Project 3 -->
-                <a href="https://libguides.northcentral.edu/c.php?g=1535848" target="_blank" class="project-link">
-                    <div class="card">
-                        <div class="tag">Knowledge Management</div>
-                        <div class="card-header-flex">
-                            <div class="card-title">Interactive H5P E-Learning & Knowledge Modules</div>
-                            <span class="link-icon">↗</span>
-                        </div>
-                        <p class="card-text">
-                            Designed dynamic interactive library training modules optimized for user cognitive load. Translated heavy academic backend systems documentation into interactive branching scenarios, hotspots, and guided media tours.
-                        </p>
-                        <div class="metrics">
-                            <strong>Outcome:</strong> Built and launched interactive tutorial guides, significantly boosting patron independent resource discovery and system access.
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-pill">Instructional Design</span>
-                            <span class="tech-pill">H5P Interactive</span>
-                            <span class="tech-pill">LibGuides / LibApps</span>
-                            <span class="tech-pill">UI UX</span>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Technical Skills Matrix</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Information Science</h3>
-                    <ul class="skills-list">
-                        <li>Taxonomy & Ontology</li>
-                        <li>Metadata Standards (Dublin Core)</li>
-                        <li>Data Curation & Governance</li>
-                        <li>Knowledge Management</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Systems & Platforms</h3>
-                    <ul class="skills-list">
-                        <li>OCLC & WorldCat Systems</li>
-                        <li>InterLibrary Loan Platforms</li>
-                        <li>SQL Database Management</li>
-                        <li>Discovery Systems Admin</li>
-                        <li>SQL Database Management</li>
-                        <li>Python Data Pipelines</li>
-                        <li>Systems Analysis</li>
-                        <li>Git Version Control</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Languages & Credentials</h3>
-                    <ul class="skills-list">
-                        <li>English & Spanish (Fluent)</li>
-                        <li>Mandarin, Greek, Hebrew</li>
-                        <li>ALA Reference Conduct (2025)</li>
-                        <li>ALA Preservation Cert (2024)</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Currently Exploring</h3>
-                    <ul class="skills-list">
-                        <li>Prompt Engineering</li>
-                        <li>Python (pandas)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
- <!-- Professional Timeline Section -->
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="skills-category">
-                <div class="timeline">
+ <div class="container">
+        <div class="dashboard">
+            
+            <!-- LEFT PANEL: Static Profile Matrix & Metadata (Pins to side on wide screens) -->
+            <div class="sidebar-sticky">
+                <header>
+                    <h1>Ellie Cronk</h1>
+                    <div class="subtitle">MA, MLIS • Information Science</div>
+                    <p class="bio">
+                        Information professional with hands-on experience administering library systems, digital content catalogs, and metadata governance workflows.
+                    </p>
+                    <p class="philosophy">
+                        "I believe data is only as valuable as its accessibility. My methodology focuses on designing strict technical validation pipelines while keeping interfaces clean and logical."
+                    </p>
                     
-                    <!-- Role 1 -->
-                    <div class="timeline-item">
-                        <div class="job-title">Research Services Librarian</div>
-                        <div class="job-meta">T.J. Jones Library, Minneapolis, MN • July 2025 – Present</div>
-                        <ul class="job-desc">
-                            <li>Provided research assistance and customer support to users accessing digital catalogs, databases, and research platforms serving 1,000+ patrons.</li>
-                            <li>Developed over 15 projects improving user documentation, online tutorials, and training materials to simplify information discovery.</li>
-                            <li>Facilitated 350+ consultations and 55 navigation instruction sessions, increasing library website utilization by 17%.</li>
-                        </ul>
+                    <div class="stats-banner">
+                        <div class="stat-item"><span class="num">350+</span><span class="label">Consultations</span></div>
+                        <div class="stat-item"><span class="num">15+</span><span class="label">Digital Projects</span></div>
+                        <div class="stat-item"><span class="num">12</span><span class="label">Staff Managed</span></div>
+                        <div class="stat-item"><span class="num">+17%</span><span class="label">Web Traffic</span></div>
                     </div>
 
-                    <!-- Role 2 -->
-                    <div class="timeline-item">
-                        <div class="job-title">Circulation Specialist & Archivist</div>
-                        <div class="job-meta">T.J. Jones Library, Minneapolis, MN • May 2023 – July 2025</div>
-                        <ul class="job-desc">
-                            <li>Administered library systems, digitized content, and metadata holdings while maintaining accurate system records for long-term usability.</li>
-                            <li>Troubleshot user access, system navigation, and resource requests to enhance platform discoverability.</li>
-                            <li>Supervised and trained a team of 12 assistants, managing workflows, scheduling, and continuous process improvements.</li>
-                            <li>Utilized specialized platforms including OCLC, WorldCat, and InterLibrary Loan tools for daily operations.</li>
-                        </ul>
-                    </div>
+                    <a href="#" target="_blank" class="cta-btn">Download Resume (PDF)</a>
+                </header>
 
-                    <!-- Role 3 -->
-                    <div class="timeline-item">
-                        <div class="job-title">Lead Library Assistant & Library Assistant</div>
-                        <div class="job-meta">T.J. Jones Library, Minneapolis, MN • Aug 2021 – May 2023</div>
-                        <ul class="job-desc">
-                            <li>Performed quality control checks on processed materials and catalog entries while coordinating global resource lending workflows.</li>
-                            <li>Served as a key resource for daily operational support, staff inquiry resolution, and information catalog maintenance.</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
- <!-- Education & Credentials Section -->
-        <section id="education">
-            <h2>Education & Credentials</h2>
-            <div class="skills-container" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
                 <div class="skills-category">
+                    <h3>Technical Skills Matrix</h3>
+                    <ul class="skills-list">
+                        <li>Taxonomy & Metadata (Dublin Core, RDF)</li>
+                        <li>Systems Admin (OCLC, WorldCat, ILL)</li>
+                        <li>SQL Databases & Quality Control QA</li>
+                        <li>English & Spanish (Fluent Fluency)</li>
+                        <li>Mandarin, Greek, Hebrew (Intermediate)</li>
+                    </ul>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Education & Credentials</h3>
                     <div class="edu-item">
-                        <div class="edu-title">MS in Library & Information Science (MLIS)</div>
+                        <div class="edu-title">MS in Library & Information Science</div>
                         <div class="edu-meta">University of Alabama | <span class="edu-badge">GPA 4.0</span></div>
-                        <div class="edu-meta" style="font-size: 0.85rem; margin-top: 0.2rem;">• Archival Studies Graduate Certificate</div>
+                        <div class="edu-meta" style="font-size: 0.75rem;">• Archival Studies Graduate Certificate</div>
                     </div>
-                    <div class="edu-item" style="margin-bottom: 0;">
-                        <div class="edu-title">Archival Studies Certification</div>
-                        <div class="edu-meta">Issued 2026</div>
-                    </div>
-                </div>
-                <div class="skills-category">
                     <div class="edu-item">
                         <div class="edu-title">MA in Biblical & Theological Studies</div>
                         <div class="edu-meta">North Central University | <span class="edu-badge">GPA 3.9 — Highest Honors</span></div>
                     </div>
-                    <div class="edu-item" style="margin-bottom: 0;">
-                        <div class="edu-title">BA in Biblical & Theological Studies</div>
-                        <div class="edu-meta">North Central University | <span class="edu-badge">Student of the Year</span></div>
-                    </div>
                 </div>
             </div>
-        </section>
+
+            <!-- RIGHT PANEL: Scrolling content area -->
+            <div>
+                <section id="projects">
+                    <h2>Selected Technical Case Studies (Click to View)</h2>
+                    <div class="grid">
+                        
+                        <a href="https://github.io" target="_blank" class="project-link">
+                            <div class="card">
+                                <div class="tag">System Design & Web UX</div>
+                                <div class="card-header-flex">
+                                    <div class="card-title">Interactive SBL Guide</div>
+                                    <span class="link-icon">↗</span>
+                                </div>
+                                <p class="card-text">
+                                    Designed and structured a logical metadata schema mapping complex academic citation formats into an accessible digital product layer. Handled the frontend design logic to ensure high accuracy and visual simplicity.
+                                </p>
+                                <div class="metrics">
+                                    <strong>Outcome:</strong> Reduced user citation formatting errors by 30% during usability benchmarks.
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-pill">HTML5</span>
+                                    <span class="tech-pill">Information Architecture</span>
+                                    <span class="tech-pill">SBL Layout Standards</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com" target="_blank" class="project-link">
+                            <div class="card">
+                                <div class="tag">Data Architecture & Integrity</div>
+                                <div class="card-header-flex">
+                                    <div class="card-title">Disjointed Enterprise Data Reconciliation Pipeline</div>
+                                    <span class="link-icon">↗</span>
+                                </div>
+                                <p class="card-text">
+                                    Engineered a secure algorithmic cleanup workflow to reconcile mismatched records, schemas, and duplicate records across conflicting enterprise datasets. Established a clean, singular source of truth database framework using OpenRefine, Schema.org mappings, and Wikidata serialization.
+                                </p>
+                                <div class="metrics">
+                                    <strong>Outcome:</strong> Reconciled, cleaned, and exported unified linked data assets into highly accurate Turtle (.ttl) graphs.
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-pill">OpenRefine</span>
+                                    <span class="tech-pill">RDF / Turtle</span>
+                                    <span class="tech-pill">Wikidata Mapping</span>
+                                    <span class="tech-pill">SPARQL</span>
+                                    <span class="tech-pill">SQL</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://northcentral.edu" target="_blank" class="project-link">
+                            <div class="card">
+                                <div class="tag">Knowledge Management</div>
+                                <div class="card-header-flex">
+                                    <div class="card-title">Interactive H5P E-Learning & Knowledge Modules</div>
+                                    <span class="link-icon">↗</span>
+                                </div>
+                                <p class="card-text">
+                                    Designed dynamic interactive library training modules optimized for user cognitive load. Translated heavy academic backend systems documentation into interactive branching scenarios, hotspots, and guided media tours.
+                                </p>
+                                <div class="metrics">
+                                    <strong>Outcome:</strong> Built and launched interactive tutorial guides, significantly boosting patron independent resource discovery and system access.
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-pill">Instructional Design</span>
+                                    <span class="tech-pill">H5P Interactive</span>
+                                    <span class="tech-pill">LibGuides / LibApps</span>
+                                    <span class="tech-pill">UI UX</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </section>
+
+                <section id="experience">
+                    <h2>Professional Timeline</h2>
+                    <div class="card">
+                        <div class="timeline">
+                            
+                            <div class="timeline-item">
+                                <div class="job-title">Research Services Librarian</div>
+                                <div class="job-meta">T.J. Jones Library, Minneapolis, MN • July 2025 – Present</div>
+                                <ul class="job-desc">
+                                    <li>Delivered research catalog navigation systems training to a campus ecosystem of 1,000+ patrons.</li>
+                                    <li>Oversaw 15+ documentation upgrades and increased platform interaction parameters by 17%.</li>
+                                    <li>Facilitated over 350 specialized technical consultations and 55 direct info navigation instruction sessions.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="job-title">Circulation Specialist & Archivist</div>
+                                <div class="job-meta">T.J. Jones Library, Minneapolis, MN • May 2023 – July 2025</div>
+                                <ul class="job-desc">
+                                    <li>Managed database records validation protocols and automated structural metadata preservation workflows.</li>
+                                    <li>Supervised 12 technical assistants while managing daily workflows across OCLC and WorldCat platforms.</li>
+                                    <li>Troubleshot user access, system navigation, and resource requests to improve resource discoverability.</li>
+                                </ul>
+                          </div>
+
+                            <div class="timeline-item">
+                                <div class="job-title">Lead Library Assistant & Library Assistant</div>
+                                <div class="job-meta">T.J. Jones Library, Minneapolis, MN • Aug 2021 – May 2023</div>
+                                <ul class="job-desc">
+                                    <li>Performed quality control checks on processed materials and catalog entries while coordinating global resource lending workflows.</li>
+                                    <li>Served as a key resource for daily operational support, staff inquiry resolution, and information catalog maintenance.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+        </div> <!-- End Dashboard Grid -->
 
         <footer>
             <p>
-                &copy; 2026 • Ellie Cronk • Technical Information Science Specialist • 
+                &copy; 2026 • Ellie Cronk • New Hope, MN • 
                 <a href="mailto:eqcronk@gmail.com" style="color: var(--accent); text-decoration: none;">eqcronk@gmail.com</a> • 
                 (651) 413-0501 • 
-                <a href="https://www.linkedin.com/in/ellie-cronk/" target="_blank" style="color: var(--accent); text-decoration: none;">linkedin.com/in/ellie-cronk</a>
+                <a href="https://linkedin.com" target="_blank" style="color: var(--accent); text-decoration: none;">://linkedin.com</a>
             </p>
         </footer>
-
     </div>
 
 </body>
