@@ -1,6 +1,3 @@
-# Create a local directory named 'generated' if it doesn't exist and write the portfolio site to it.
-import os
-
 code_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -202,7 +199,7 @@ code_content = """<!DOCTYPE html>
 
     <div class="container">
         <header>
-            <h1>Your Name</h1>
+            <h1>Ellie Cronk, MA, MLIS</h1>
             <div class="subtitle">Technical Information Science Specialist</div>
             <p class="bio">
                 Bridging the gap between complex technological systems and human-centric information management. Expert in data structural integrity, automation pipelines, and translating scientific metadata ecosystems into intuitive, operational digital frameworks.
@@ -214,58 +211,61 @@ code_content = """<!DOCTYPE html>
             <div class="grid">
                 
                 <!-- Project 1 -->
-                <div class="card">
-                    <div class="tag">System Design & Web UX</div>
-                    <div class="card-title">Interactive Citation Tool & Website Guides</div>
-                    <p class="card-text">
-                        Designed and structured a logical metadata schema mapping complex academic and scientific citation formats into an accessible digital product layer. Handled the frontend design logic to ensure high accuracy and visual simplicity.
-                    </p>
-                    <div class="metrics">
-                        <strong>Outcome:</strong> Reduced user citation formatting errors by 30% during pilot usability benchmarks.
+                <a href="https://eqcronk.github.io/SBL-Guide/" target="_blank" class="project-link">
+                    <div class="card">
+                        <div class="tag">System Design & Web UX</div>
+                        <div class="card-title">Interactive SBL Guide</div>
+                        <p class="card-text">
+                            Designed and structured a logical metadata schema mapping complex academic citation formats into an accessible digital product layer. Handled the frontend design logic to ensure high accuracy and visual simplicity.
+                        </p>
+                        <div class="metrics">
+                            <strong>Outcome:</strong> Reduced user citation formatting errors by 30% during pilot usability benchmarks.
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">Information Architecture</span>
+                        </div>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-pill">HTML5</span>
-                        <span class="tech-pill">CSS3</span>
-                        <span class="tech-pill">JavaScript</span>
-                        <span class="tech-pill">Information Architecture</span>
-                    </div>
-                </div>
+                </a>
 
                 <!-- Project 2 -->
-                <div class="card">
-                    <div class="tag">Data Architecture & Integrity</div>
-                    <div class="card-title">Disjointed Enterprise Data Reconciliation Pipeline</div>
-                    <p class="card-text">
-                        Engineered a secure algorithmic cleanup workflow to reconcile mismatched records, schemas, and duplicate records across conflicting enterprise datasets. Established a clean, singular source of truth database framework.
-                    </p>
-                    <div class="metrics">
-                        <strong>Outcome:</strong> Cleaned and mapped 50,000+ relational entries, realizing 99.8% factual accuracy.
+                <a href="https://github.com/eqcronk/-linked-data-project" target="_blank" class="project-link"></a>
+                    <div class="card">
+                        <div class="tag">Data Architecture & Integrity</div>
+                        <div class="card-title">Disjointed Enterprise Data Reconciliation Pipeline</div>
+                        <p class="card-text">
+                            Engineered a secure algorithmic cleanup workflow to reconcile mismatched records, schemas, and duplicate records across conflicting enterprise datasets. Established a clean, singular source of truth database framework.
+                        </p>
+                        <div class="metrics">
+                            <strong>Outcome:</strong> Cleaned and mapped 50,000+ relational entries, realizing 99.8% factual accuracy.
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-pill">SPRQL</span>
+                            <span class="tech-pill">SQL</span>
+                            <span class="tech-pill">Data Governance</span>
+                        </div>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">Pandas</span>
-                        <span class="tech-pill">SQL</span>
-                        <span class="tech-pill">Data Governance</span>
-                    </div>
-                </div>
+                </a>
 
                 <!-- Project 3 -->
-                <div class="card">
-                    <div class="tag">Knowledge Management</div>
-                    <div class="card-title">Interactive E-Learning & Knowledge Modules</div>
-                    <p class="card-text">
-                        Designed dynamic interactive training modules optimized for user cognitive load. Translated heavy backend systems documentation into structured interactive flows that scale organizational onboarding.
-                    </p>
-                    <div class="metrics">
-                        <strong>Outcome:</strong> Built and launched 5 multi-tier courses, boosting internal employee test scores by 40%.
+                <a href="https://libguides.northcentral.edu/c.php?g=1535848" target="_blank" class="project-link"></a>
+                    <div class="card">
+                        <div class="tag">Knowledge Management</div>
+                        <div class="card-title">Interactive H5P E-Learning & Knowledge Modules</div>
+                        <p class="card-text">
+                            Designed dynamic interactive training modules optimized for user cognitive load. Translated heavy backend systems documentation into structured interactive flows.
+                        </p>
+                        <div class="metrics">
+                            <strong>Outcome:</strong> Built and launched modules, boosting patron access to resources.
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-pill">Instructional Design</span>
+                            <span class="tech-pill">H5P</span>
+                            <span class="tech-pill">E-Learning Frameworks</span>
+                            <span class="tech-pill">UI UX</span>
+                        </div>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-pill">Instructional Design</span>
-                        <span class="tech-pill">SCORM</span>
-                        <span class="tech-pill">E-Learning Frameworks</span>
-                        <span class="tech-pill">UI UX</span>
-                    </div>
-                </div>
+                </a>
 
             </div>
         </section>
