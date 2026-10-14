@@ -368,6 +368,47 @@
             color: var(--text-muted);
             font-size: 0.8rem;
         }
+
+        .testimonial-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .testimonial-author {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-align: right;
+        }
+
+        .ref-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .ref-item {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .ref-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
     </style>
 </head>
 <body>
@@ -533,6 +574,52 @@
                         </div>
                     </div>
                 </section>
+                <!-- Endorsements & References Section -->
+                <section id="endorsements">
+                    <h2>Professional Endorsements</h2>
+                    
+                    <!-- Testimonial Quote 1-->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "Ellie consistently translated dense technical systems criteria into incredibly smooth workflows. Her metadata governance restructuring elevated our data capture workflows significantly."
+                        </p>
+                        <div class="testimonial-author">— Library Director, T.J. Jones Library</div>
+                    </div>
+                     <!-- Testimonial Quote 2-->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "Ellie consistently translated dense technical systems criteria into incredibly smooth workflows. Her metadata governance restructuring elevated our data capture workflows significantly."
+                        </p>
+                        <div class="testimonial-author">— Software Developer I, MEDITECH</div>
+                    </div>
+                    <!-- Testimonial Quote 3-->
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "I am confident that Ellie would be a wonderful addition to your team. She has the education,experience, and interpersonal qualities that make her well-suited for the Technical Information Science. I recommend her without reservation."
+                        </p>
+                        <div class="testimonial-author">— Sr Distinguished Engineer, Medtronic</div>
+                    </div>
+
+                    <div class="skills-category" style="margin-top: 1.5rem;">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1rem; color: var(--text-main);">Professional References</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; font-style: italic;">
+                            Full formal letters of recommendation and contact details are available immediately upon request.
+                        </p>
+                        <div class="ref-grid">
+                            <div class="ref-item">
+                                <div class="ref-name">Reference Name, MLIS</div>
+                                <div>Library Administration Director</div>
+                                <div>T.J. Jones Library Ecosystem</div>
+                            </div>
+                            <div class="ref-item">
+                                <div class="ref-name">Reference Name, PhD</div>
+                                <div>Graduate Advisor / Professor</div>
+                                <div>University of Alabama Academic Program</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </div>
             
         </div> <!-- End Dashboard Grid -->
