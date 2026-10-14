@@ -57,6 +57,37 @@
             color: var(--text-muted);
             max-width: 700px;
             font-size: 1.05rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .philosophy {
+            font-style: italic;
+            color: var(--accent);
+            border-left: 2px solid var(--border);
+            padding-left: 1rem;
+            margin-top: 1rem;
+            max-width: 700px;
+            font-size: 0.95rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background-color: transparent;
+            color: var(--accent) !important;
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1.2rem;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent-hover) !important;
+            border-color: var(--accent-hover);
         }
 
         section {
@@ -78,23 +109,56 @@
             gap: 1.5rem;
         }
 
+        .project-link, 
+        .project-link:link, 
+        .project-link:visited, 
+        .project-link:active {
+            text-decoration: none !important;
+            color: inherit !important;
+            display: block;
+            cursor: pointer;
+        }
+
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 0.75rem;
             padding: 1.75rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .card:hover {
-            transform: translateY(-2px);
+        .project-link:hover .card {
+            transform: translateY(-4px);
             border-color: var(--accent);
+            box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.2);
+        }
+
+        .card-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .card-title {
             font-size: 1.3rem;
             color: var(--text-main);
-            margin-bottom: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .project-link:hover .card-title {
+            color: var(--accent);
+        }
+
+        .link-icon {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+        }
+
+        .project-link:hover .link-icon {
+            color: var(--accent);
         }
 
         .tag {
@@ -107,18 +171,6 @@
             font-weight: 500;
             margin-bottom: 1rem;
         }
-
-        .project-link {
-            text-decoration: none;
-            color: inherit; 
-            display: block;
-            cursor: pointer;
-        }
-
-        .project-link:visited {
-            color: inherit; 
-        }
-
 
         .card-text {
             color: var(--text-muted);
@@ -216,22 +268,29 @@
             <p class="bio">
                 Bridging the gap between complex technological systems and human-centric information management. Expert in data structural integrity, automation pipelines, and translating scientific metadata ecosystems into intuitive, operational digital frameworks.
             </p>
+            <p class="philosophy">
+                "I believe data is only as valuable as its accessibility and governance. My methodology focuses on designing strict validation frameworks while keeping interfaces clean, predictable, and logical for cross-functional utilization."
+            </p>
+            <a href="files/Ellie_Cronk_Resume.pdf" target="_blank" class="cta-btn">⬇ Download Resume (PDF)</a>
         </header>
 
         <section id="projects">
-            <h2>Selected Technical Case Studies</h2>
+            <h2>Selected Technical Case Studies (Click to View)</h2>
             <div class="grid">
                 
                 <!-- Project 1 -->
                 <a href="https://eqcronk.github.io/SBL-Guide/" target="_blank" class="project-link">
                     <div class="card">
                         <div class="tag">System Design & Web UX</div>
-                        <div class="card-title">Interactive SBL Guide</div>
+                        <div class="card-header-flex">
+                            <div class="card-title">Interactive SBL Guide</div>
+                            <span class="link-icon">↗</span>
+                        </div>
                         <p class="card-text">
                             Designed and structured a logical metadata schema mapping complex academic citation formats into an accessible digital product layer. Handled the frontend design logic to ensure high accuracy and visual simplicity.
                         </p>
                         <div class="metrics">
-                            <strong>Outcome:</strong> Reduced user citation formatting errors by 30% during pilot usability benchmarks.
+                            <strong>Outcome:</strong> Reduced user citation formatting errors by 30% during usability benchmarks.
                         </div>
                         <div class="tech-stack">
                             <span class="tech-pill">HTML5</span>
@@ -249,7 +308,7 @@
                             Engineered a secure algorithmic cleanup workflow to reconcile mismatched records, schemas, and duplicate records across conflicting enterprise datasets. Established a clean, singular source of truth database framework.
                         </p>
                         <div class="metrics">
-                            <strong>Outcome:</strong> Cleaned and mapped 50,000+ relational entries, realizing 99.8% factual accuracy.
+                            <strong>Outcome:</strong> Cleaned and mapped entries for accuracy.
                         </div>
                         <div class="tech-stack">
                             <span class="tech-pill">SPRQL</span>
@@ -263,17 +322,20 @@
                 <a href="https://libguides.northcentral.edu/c.php?g=1535848" target="_blank" class="project-link">
                     <div class="card">
                         <div class="tag">Knowledge Management</div>
-                        <div class="card-title">Interactive H5P E-Learning & Knowledge Modules</div>
+                        <div class="card-header-flex">
+                            <div class="card-title">Interactive H5P E-Learning & Knowledge Modules</div>
+                            <span class="link-icon">↗</span>
+                        </div>
                         <p class="card-text">
-                            Designed dynamic interactive training modules optimized for user cognitive load. Translated heavy backend systems documentation into structured interactive flows.
+                            Designed dynamic interactive library training modules optimized for user cognitive load. Translated heavy academic backend systems documentation into interactive branching scenarios, hotspots, and guided media tours.
                         </p>
                         <div class="metrics">
-                            <strong>Outcome:</strong> Built and launched modules, boosting patron access to resources.
+                            <strong>Outcome:</strong> Built and launched interactive tutorial guides, significantly boosting patron independent resource discovery and system access.
                         </div>
                         <div class="tech-stack">
                             <span class="tech-pill">Instructional Design</span>
-                            <span class="tech-pill">H5P</span>
-                            <span class="tech-pill">E-Learning Frameworks</span>
+                            <span class="tech-pill">H5P Interactive</span>
+                            <span class="tech-pill">LibGuides / LibApps</span>
                             <span class="tech-pill">UI UX</span>
                         </div>
                     </div>
@@ -302,3 +364,21 @@
                         <li>Systems Analysis</li>
                         <li>Git Version Control</li>
                     </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Currently Exploring</h3>
+                    <ul class="skills-list">
+                        <li>Prompt Engineering</li>
+                        <li>Python (pandas)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 • Ellie Cronk • Technical Information Science Specialist • eqcronk@gmail.com • (651) 413-0501 • https://www.linkedin.com/in/ellie-cronk/</p>
+        </footer>
+    </div>
+
+</body>
+</html>
