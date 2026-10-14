@@ -466,16 +466,18 @@
             box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
         }
 
-        .project-thumb {
+         .project-thumb {
             width: 100%;
             height: 100%;
-            /* Ensures your mockups scale beautifully without stretching out of proportion */
             object-fit: cover; 
-            transition: transform 0.2s ease;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            
+            image-rendering: -webkit-optimize-contrast; 
+            image-rendering: crisp-edges;               
         }
 
         .project-link:hover .project-thumb {
-            transform: scale(1.08); 
+            transform: scale(1.05); 
         }
 
     </style>
