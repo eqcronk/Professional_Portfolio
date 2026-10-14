@@ -15,7 +15,7 @@ You can view my live, fully responsive digital portfolio here:
 *   **The Execution:** Designed and structured a logical metadata schema mapping complex academic citation formats into an accessible digital product layer. Handled the frontend design logic to ensure high accuracy and visual simplicity.
 *   **Impact Metric:** Reduced user citation formatting errors by 30% during pilot usability benchmarks.
 
-### 2. Disjointed Enterprise Data Reconciliation Pipeline
+### 2. Data Reconciliation Pipeline
 *   **Core Focus:** Data Architecture & Integrity
 *   **The Execution:** Engineered an automated backend cleanup workflow to reconcile mismatched records, schemas, and duplicate records across conflicting enterprise datasets using OpenRefine, Schema.org mappings, and Wikidata serialization.
 *   **Impact Metric:** Reconciled, cleaned, and exported unified linked data assets into highly accurate Turtle (.ttl) graphs.
